@@ -1,4 +1,3 @@
-import React from "react";
 import styles from "./Sidebar.module.css";
 
 const Sidebar = ({
@@ -10,23 +9,19 @@ const Sidebar = ({
 }) => {
   return (
     <div className={`${styles.sidebar} ${isOpen ? styles.open : ""}`}>
-      {/* Sidebar Header: Logo (que também fecha o sidebar) */}
       <div className={styles.sidebarHeader}>
-        {/* Logo funcionando como botão de fechar */}
         <img
-          src="/Header.png" // Caminho da logo
+          src="/Header.png"
           alt="Logo"
           className={styles.logo}
-          onClick={closeSidebar} // Função para fechar o sidebar
+          onClick={closeSidebar}
         />
       </div>
 
-      {/* Navegação do Menu */}
       <nav>
         <a href="">Home</a>
-        <a href="">Sobre</a>
-        <a href="">Serviços</a>
-        <a href="">Contato</a>
+        <a href="">Cliente</a>
+        <a href="">Produto</a>
       </nav>
     </div>
   );
