@@ -2,14 +2,14 @@ import Sidebar from "../SideBar";
 import styles from "./Header.module.css";
 import { useState } from "react";
 
-function Header() {
-  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
+const Header: React.FC = () => {
+  const [isSidebarOpen, setIsSidebarOpen] = useState<boolean>(false);
 
   // Função para abrir o sidebar
-  const openSidebar = () => setIsSidebarOpen(true);
+  const openSidebar = (): void => setIsSidebarOpen(true);
 
   // Função para fechar o sidebar
-  const closeSidebar = () => setIsSidebarOpen(false);
+  const closeSidebar = (): void => setIsSidebarOpen(false);
 
   return (
     <header className={styles.header}>
@@ -41,9 +41,11 @@ function Header() {
           Olá, <strong>Usuário</strong>
         </span>
       </div>
+
+      {/* Sidebar */}
       <Sidebar isOpen={isSidebarOpen} closeSidebar={closeSidebar} />
     </header>
   );
-}
+};
 
 export default Header;

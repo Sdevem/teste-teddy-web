@@ -38,13 +38,23 @@
 
 .sidebar nav {
   margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px; /* Espaço entre os itens */
+  padding-left: 20px; /* Afastamento da esquerda */
 }
 
 .sidebar nav a {
-  display: block;
+  display: flex;
+  align-items: center;
+  gap: 10px; /* Espaço entre ícone e texto */
   text-decoration: none;
   color: var(--black);
-  margin-bottom: 20px;
+  font-size: 18px;
   font-weight: bold;
-  margin-left: 20px;
+}
+
+.icon {
+  font-size: 20px; /* Tamanho do ícone */
+  color: var(--black); /* Cor do ícone */
 }

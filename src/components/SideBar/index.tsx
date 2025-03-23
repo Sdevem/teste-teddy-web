@@ -1,4 +1,5 @@
 import styles from "./Sidebar.module.css";
+import { FaHome, FaUser, FaBox } from "react-icons/fa"; // Ícones
 
 const Sidebar = ({
   isOpen,
@@ -19,9 +20,15 @@ const Sidebar = ({
       </div>
 
       <nav>
-        <a href="">Home</a>
-        <a href="">Cliente</a>
-        <a href="">Produto</a>
+        <a href="">
+          <FaHome className={styles.icon} /> Home
+        </a>
+        <a href="">
+          <FaUser className={styles.icon} /> Cliente
+        </a>
+        <a href="">
+          <FaBox className={styles.icon} /> Produto
+        </a>
       </nav>
     </div>
   );
