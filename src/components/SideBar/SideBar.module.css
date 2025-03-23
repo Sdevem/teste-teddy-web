@@ -1,0 +1,54 @@
+/* Estilo para o sidebar */
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: -250px; /* Sidebar começa fora da tela */
+  width: 250px;
+  height: 100%;
+  background-color: var(--primary); /* Cor do sidebar */
+  transition: left 0.3s ease; /* Transição suave */
+  z-index: 1000;
+  padding: 0; /* Removendo padding geral */
+}
+
+.sidebar.open {
+  left: 0; /* Sidebar entra na tela quando "aberto" */
+}
+
+/* Header da Sidebar */
+.sidebarHeader {
+  display: flex;
+  justify-content: center; /* Centraliza a logo */
+  align-items: center;
+  position: relative;
+  background-color: gray; /* Cor de fundo igual ao cinza */
+  width: 100%;
+  height: 100px; /* Ajuste o tamanho conforme necessário */
+  padding: 0; /* Removendo qualquer padding */
+  margin: 0; /* Removendo qualquer margem */
+  overflow: hidden; /* Garante que nada ultrapasse a área */
+}
+
+/* A logo agora deve preencher totalmente a área do cabeçalho */
+.logo {
+  cursor: pointer;
+  width: 100vw; /* Logo preenche toda a largura da tela (viewport) */
+  height: 100%; /* Logo preenche toda a altura da área do cabeçalho */
+  object-fit: cover; /* Faz a imagem preencher todo o espaço, possivelmente cortando para manter a proporção */
+  display: block; /* Garante que não haja espaço extra */
+  margin: 0; /* Removendo margens */
+}
+
+/* Navegação do Sidebar */
+.sidebar nav {
+  margin-top: 20px; /* Espaço entre a logo e as opções de navegação */
+}
+
+.sidebar nav a {
+  display: block;
+  text-decoration: none;
+  color: var(--black);
+  margin-bottom: 20px; /* Distância entre as opções de navegação */
+  font-weight: bold;
+  margin-left: 20px; /* Espaçamento à esquerda de cada opção */
+}
