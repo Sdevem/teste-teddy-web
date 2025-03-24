@@ -38,9 +38,14 @@
   gap: 30px;
 }
 
-.nav a {
+.link {
   text-decoration: none;
-  color: var(--black);
+  color: black;
+  font-weight: bold;
+}
+
+.activeLink {
+  color: orange;
   font-weight: bold;
 }
 

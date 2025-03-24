@@ -1,3 +1,4 @@
+import { NavLink } from "react-router-dom";
 import Sidebar from "../SideBar";
 import styles from "./Header.module.css";
 import { useState } from "react";
@@ -5,22 +6,18 @@ import { useState } from "react";
 const Header: React.FC = () => {
   const [isSidebarOpen, setIsSidebarOpen] = useState<boolean>(false);
 
-  // Função para abrir o sidebar
   const openSidebar = (): void => setIsSidebarOpen(true);
-
-  // Função para fechar o sidebar
   const closeSidebar = (): void => setIsSidebarOpen(false);
 
   return (
     <header className={styles.header}>
-      {/* Div externa para logo e ícone de menu */}
       <div className={styles.logoAndMenu}>
         <div className={styles.menuIconContainer}>
           <img
             src="/menu-svgrepo-com.png"
             alt="ícone"
             className={styles.menuIcon}
-            onClick={openSidebar} // Aqui pode ir a lógica para abrir o sidebar
+            onClick={openSidebar}
           />
         </div>
         <div className={styles.logoContainer}>
@@ -28,14 +25,34 @@ const Header: React.FC = () => {
         </div>
       </div>
 
-      {/* Navegação */}
       <nav className={styles.nav}>
-        <a href="">Clientes</a>
-        <a href="">Clientes Selecionados</a>
-        <a href="">Sair</a>
+        <NavLink
+          to="/clients"
+          end
+          className={({ isActive }) =>
+            isActive ? styles.activeLink : styles.link
+          }
+        >
+          Clientes
+        </NavLink>
+        <NavLink
+          to="/clients/select"
+          className={({ isActive }) =>
+            isActive ? styles.activeLink : styles.link
+          }
+        >
+          Clientes Selecionados
+        </NavLink>
+        <NavLink
+          to="/"
+          className={({ isActive }) =>
+            isActive ? styles.activeLink : styles.link
+          }
+        >
+          Sair
+        </NavLink>
       </nav>
 
-      {/* Nome do usuário à direita */}
       <div className={styles.userContainer}>
         <span className={styles.userName}>
           Olá, <strong>Usuário</strong>

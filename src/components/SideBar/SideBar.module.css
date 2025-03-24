@@ -49,7 +49,6 @@
   align-items: center;
   gap: 10px; /* Espaço entre ícone e texto */
   text-decoration: none;
-  color: var(--black);
   font-size: 18px;
   font-weight: bold;
 }
@@ -57,4 +56,15 @@
 .icon {
   font-size: 20px; /* Tamanho do ícone */
   color: var(--black); /* Cor do ícone */
+}
+
+.link {
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+}
+
+.activeLink {
+  color: orange;
+  font-weight: bold;
 }
