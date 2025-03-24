@@ -1,0 +1,59 @@
+.clients {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px 20px;
+}
+
+.list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  width: 100%;
+  max-width: 1200px;
+  min-height: 800px;
+}
+
+.createButton {
+  width: 1200px;
+  margin-top: 40px;
+  background-color: transparent;
+  color: orange;
+  border: 2px solid orange;
+  border-radius: 8px;
+  padding: 12px 24px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.createButton:hover {
+  background-color: orange;
+  color: white;
+}
+
+.headerInfo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 1200px;
+  padding: 0 10px;
+  margin-bottom: 24px;
+  font-weight: bold;
+}
+
+.selectWrapper {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.selectWrapper select {
+  padding: 4px 8px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 14px;
+  cursor: pointer;
+}

@@ -1,0 +1,75 @@
+.card {
+  width: 260px;
+  height: 180px;
+  background: var(--primary);
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  overflow: hidden;
+}
+
+.minusIcon {
+  margin-left: auto;
+  font-size: 24px;
+  font-weight: bold;
+  color: var(--black);
+  cursor: default;
+}
+
+.card_data {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  text-align: center;
+  gap: 0px;
+}
+
+.card_foot {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 0 0px;
+}
+
+.leftIcon {
+  font-size: 24px;
+  cursor: pointer;
+  color: var(--black);
+  transition: color 0.3s, opacity 0.3s;
+  padding: 0 0px;
+}
+
+.centerIcon {
+  font-size: 24px;
+  cursor: pointer;
+  color: var(--black);
+  transition: color 0.3s, opacity 0.3s;
+  padding: 0 0px;
+}
+
+.rightIcon {
+  font-size: 24px;
+  cursor: pointer;
+  color: red;
+  transition: color 0.3s, opacity 0.3s;
+  padding: 0 0px;
+}
+
+.leftIcon:hover {
+  color: orange;
+}
+
+.centerIcon:hover {
+  color: red;
+}
+
+.rightIcon:hover {
+  color: green;
+}

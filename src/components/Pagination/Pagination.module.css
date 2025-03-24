@@ -1,0 +1,32 @@
+.pagination {
+  display: flex;
+  gap: 8px;
+  margin-top: 40px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.pageButton {
+  padding: 8px 12px;
+  background: none;
+  border: none;
+  border-radius: 8px;
+  color: black;
+  cursor: pointer;
+  font-weight: bold;
+  transition: all 0.2s ease;
+}
+
+.pageButton:hover {
+  background-color: #ffe4c4;
+}
+
+.active {
+  background-color: orange;
+  color: white;
+}
+.ellipsis {
+  padding: 8px 12px;
+  color: #888;
+  font-weight: bold;
+}

@@ -17,7 +17,7 @@ const Sidebar = ({
     <div className={`${styles.sidebar} ${isOpen ? styles.open : ""}`}>
       <div className={styles.sidebarHeader}>
         <img
-          src="/Header.png"
+          src="./Logo-Teddy.png"
           alt="Logo"
           className={styles.logo}
           onClick={closeSidebar}
